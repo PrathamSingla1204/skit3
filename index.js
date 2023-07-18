@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
+const bodyParser = require('body-parser');
 const port = 8000;
-const expressLayouts = require('express-ejs-layouts');
-app.use(expressLayouts);
-app.set('view engine','ejs');
-app.set('views','./views');
+const db = require('./config/mongoose');
 
-app.use('/',require('./routes'));
+
+app.use('/products', require('./routes'));
+app.use(bodyParser.urlencoded({extended: true}));
 app.listen(port,(err)=>{
     if(err){
         console.log(err);
