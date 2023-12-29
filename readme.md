@@ -1,7 +1,7 @@
 
 # Ecommerce API
 
-API for an ecommerce platform admin to manage product inventory.Made for coding ninjas skill tag 
+API for an ecommerce platform to streamline the management of inventory
 
 ## Deployment
 
